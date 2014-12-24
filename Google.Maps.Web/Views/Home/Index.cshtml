@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Google.Maps.Core.Geocoding.Result>
+
+<div class="page-header">
+    <h1>Example page header <small>Subtext for header</small></h1>
+</div>
+
+<div id="map-canvas">
+</div>
+
+@section Scripts {
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="~/Scripts/Home/index.js"></script>
+
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+}
+
+<div data-ng-app="mapsApp">
+    <!-- movie list view -->
+    <div data-ng-controller="mapsCtrl">
+        <div class="row">
+            <div class="col-lg-6">
+                <fieldset>
+                    <legend>Search term</legend>
+                </fieldset>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="app.term" data-ng-model="app.term">
+                    <span class="input-group-btn">
+                        <button ng-click="app.search()" class="btn btn-primary" type="button">Search</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Search results</th>
+                    <th>latitude</th>
+                    <th>longitude</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="r in app.results | orderBy:'formatted_address'">
+                    <td><span ng-bind="r.formatted_address"></span></td>
+                    <td><span ng-bind="r.geometry.location.lat"></span></td>
+                    <td><span ng-bind="r.geometry.location.lng"></span></td>
+                    <td><button ng-click="app.showMap(r.geometry.location.lat, r.geometry.location.lng)" class="btn btn-xs btn-primary" type="button">Show on map</button></td>
+                    <td><button ng-click="app.addFavorite(r.formatted_address, r.geometry.location.lat, r.geometry.location.lng)" class="btn btn-xs btn-default" type="button">Add favorite</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Favorites</th>
+                    <th>latitude</th>
+                    <th>longitude</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="f in app.favorites | orderBy:'Name'">
+                    <td><span ng-bind="f.Name"></span></td>
+                    <td><span ng-bind="f.Latitude"></span></td>
+                    <td><span ng-bind="f.Longitude"></span></td>
+                    <td><button ng-click="app.showMap(f.Latitude, f.Longitude)" class="btn btn-xs btn-primary" type="button">Show on map</button></td>
+                    <td><button ng-click="app.removeFavorite(f.Id)" class="btn btn-xs btn-danger" type="button">Remove favorite</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
