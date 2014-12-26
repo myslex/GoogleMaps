@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>Application</title>
+
+    @Styles.Render("~/Content/css")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,8 +29,8 @@
         @RenderBody()
     </div>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*@Scripts.Render("~/bundles/jquery", "~/bundles/angular", "~/bundles/bootstrap", "~/bundles/app")*@
+    @Scripts.Render("~/bundles/jquery", "~/bundles/angular", "~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

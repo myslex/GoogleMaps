@@ -30,3 +30,8 @@ C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.We
 C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\EntityFramework.SqlServer.dll
 C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\EntityFramework.xml
 C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\Antlr3.Runtime.dll
+C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\System.Web.Optimization.dll
+C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\WebGrease.dll
+C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\Antlr3.Runtime.pdb
+C:\Users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Web\bin\System.Web.Optimization.xml

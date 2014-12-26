@@ -29,9 +29,7 @@ namespace Google.Maps.Web.Controllers
         {
             Favorite favorite = await db.Favorites.FindAsync(id);
             if (favorite == null)
-            {
                 return NotFound();
-            }
 
             return Ok(favorite);
         }
@@ -41,14 +39,10 @@ namespace Google.Maps.Web.Controllers
         public async Task<IHttpActionResult> PutFavorite(int id, Favorite favorite)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (id != favorite.Id)
-            {
                 return BadRequest();
-            }
 
             db.Entry(favorite).State = EntityState.Modified;
 
@@ -59,13 +53,9 @@ namespace Google.Maps.Web.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!FavoriteExists(id))
-                {
                     return NotFound();
-                }
                 else
-                {
                     throw;
-                }
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -76,12 +66,9 @@ namespace Google.Maps.Web.Controllers
         public async Task<IHttpActionResult> PostFavorite(Favorite favorite)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            db.Favorites.Add(favorite);
-            await db.SaveChangesAsync();
+            var temp = await db.Favorites.SingleOrDefaultAsync(f => f.Address == favorite.Address) ?? db.Favorites.Add(favorite); await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = favorite.Id }, favorite);
         }
@@ -92,9 +79,7 @@ namespace Google.Maps.Web.Controllers
         {
             Favorite favorite = await db.Favorites.FindAsync(id);
             if (favorite == null)
-            {
                 return NotFound();
-            }
 
             db.Favorites.Remove(favorite);
             await db.SaveChangesAsync();
@@ -105,9 +90,8 @@ namespace Google.Maps.Web.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
+
             base.Dispose(disposing);
         }
 

@@ -18,10 +18,10 @@ app.controller('mapsCtrl', ['$scope', '$http',
 
         $scope.app.loadFavorites();
 
-        $scope.app.addFavorite = function (name, lat, lng) {
+        $scope.app.addFavorite = function (address, lat, lng) {
 
             var favorite = {
-                Name: name,
+                Address: address,
                 Latitude: lat,
                 Longitude: lng
             };
@@ -48,23 +48,44 @@ app.controller('mapsCtrl', ['$scope', '$http',
         };
 
         $scope.app.loadMap = function () {
+            var mapLocation = new google.maps.LatLng(-34.397, 150.644);
+
             var mapOptions = {
-                zoom: 8,
-                center: new google.maps.LatLng(-34.397, 150.644)
+                zoom: 14,
+                center: mapLocation
             };
 
+            var mapMarker = new google.maps.Marker({
+                position: mapLocation,
+                map: $scope.app.map,
+                title: "Initial map location"
+            });
+
             $scope.app.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+            mapMarker.setMap($scope.app.map);
         }
 
         $scope.app.loadMap();
 
-        $scope.app.showMap = function (lat, lng) {
+        $scope.app.showMap = function (address, lat, lng) {
+
+            var mapLocation = new google.maps.LatLng(lat, lng);
+
             var mapOptions = {
-                zoom: 8,
-                center: new google.maps.LatLng(lat, lng)
+                zoom: 14,
+                center: mapLocation
             };
 
+            var mapMarker = new google.maps.Marker({
+                position: mapLocation,
+                map: $scope.app.map,
+                title: address
+            });
+
             $scope.app.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+            mapMarker.setMap($scope.app.map);
         };
 
         $scope.app.search = function () {

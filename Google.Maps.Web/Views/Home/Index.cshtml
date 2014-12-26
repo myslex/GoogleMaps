@@ -8,14 +8,14 @@
 </div>
 
 @section Scripts {
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
     <script src="~/Scripts/Home/index.js"></script>
 
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 }
 
+
+
 <div data-ng-app="mapsApp">
-    <!-- movie list view -->
     <div data-ng-controller="mapsCtrl">
         <div class="row">
             <div class="col-lg-6">
@@ -46,7 +46,7 @@
                     <td><span ng-bind="r.formatted_address"></span></td>
                     <td><span ng-bind="r.geometry.location.lat"></span></td>
                     <td><span ng-bind="r.geometry.location.lng"></span></td>
-                    <td><button ng-click="app.showMap(r.geometry.location.lat, r.geometry.location.lng)" class="btn btn-xs btn-primary" type="button">Show on map</button></td>
+                    <td><button ng-click="app.showMap(r.formatted_address, r.geometry.location.lat, r.geometry.location.lng)" class="btn btn-xs btn-primary" type="button">Show on map</button></td>
                     <td><button ng-click="app.addFavorite(r.formatted_address, r.geometry.location.lat, r.geometry.location.lng)" class="btn btn-xs btn-default" type="button">Add favorite</button></td>
                 </tr>
             </tbody>
@@ -64,10 +64,10 @@
             </thead>
             <tbody>
                 <tr data-ng-repeat="f in app.favorites | orderBy:'Name'">
-                    <td><span ng-bind="f.Name"></span></td>
+                    <td><span ng-bind="f.Address"></span></td>
                     <td><span ng-bind="f.Latitude"></span></td>
                     <td><span ng-bind="f.Longitude"></span></td>
-                    <td><button ng-click="app.showMap(f.Latitude, f.Longitude)" class="btn btn-xs btn-primary" type="button">Show on map</button></td>
+                    <td><button ng-click="app.showMap(f.Address, f.Latitude, f.Longitude)" class="btn btn-xs btn-primary" type="button">Show on map</button></td>
                     <td><button ng-click="app.removeFavorite(f.Id)" class="btn btn-xs btn-danger" type="button">Remove favorite</button></td>
                 </tr>
             </tbody>
