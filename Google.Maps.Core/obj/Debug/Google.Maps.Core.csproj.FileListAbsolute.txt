@@ -5,3 +5,9 @@ c:\users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Co
 c:\users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Core\bin\Debug\Newtonsoft.Json.xml
 c:\users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Core\obj\Debug\Google.Maps.Core.dll
 c:\users\m41n\documents\visual studio 2013\Projects\v2\GoogleMaps\Google.Maps.Core\obj\Debug\Google.Maps.Core.pdb
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Debug\Google.Maps.Core.dll
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Debug\Google.Maps.Core.pdb
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\obj\Debug\Google.Maps.Core.dll
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\obj\Debug\Google.Maps.Core.pdb

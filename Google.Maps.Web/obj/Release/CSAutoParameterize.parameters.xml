@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MapContext-Web.config Connection String" description="MapContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=GoogleMaps;Integrated Security=SSPI;User ID=sa;Password=123456;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\m41n\\Documents\\GitHub\\GoogleMaps\\Google\.Maps\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MapContext']/@connectionString" />
+  </parameter>
+</parameters>

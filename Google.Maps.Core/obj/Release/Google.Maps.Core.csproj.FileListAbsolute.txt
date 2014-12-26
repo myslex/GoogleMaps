@@ -1,0 +1,6 @@
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Release\Google.Maps.Core.dll
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Release\Google.Maps.Core.pdb
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\obj\Release\Google.Maps.Core.dll
+C:\Users\m41n\Documents\GitHub\GoogleMaps\Google.Maps.Core\obj\Release\Google.Maps.Core.pdb
